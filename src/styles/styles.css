@@ -46,7 +46,7 @@ body{
     align-items: center;
 }
 
-.navbar nav a{
+.navbar nav .nav-item{
     position: relative;
     margin: 0 1rem;
     color: white;
@@ -55,7 +55,7 @@ body{
     transition: 0.3s ease 0s;
 }
 
-.navbar nav a:hover, a.active{
+.navbar nav .nav-item:hover, .navbar .nav-item.active{
     color: #1134A6;
 }
 
@@ -69,6 +69,17 @@ body{
     font-size: 10rem;
 }
 
+.section-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.section-title{
+    font-size: 4rem;
+    font-weight: 500px;
+    color: white;
+}
 /* Projects */
 .card-list{
     display: flex;
@@ -140,7 +151,7 @@ body{
     border: 0;
     display: inline-block;
 }
-.card-header i{
+.card-header .fa-plus{
     display: flex;
     margin-top: 40%;
     justify-content: center;
@@ -152,9 +163,26 @@ body{
     font-size: 1rem;
 }
 
-.card-header .note{
-    position: relative;
-    margin-bottom: 1rem;
+.card-footer{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card-footer .fa-circle{
+    font-size: 1rem;
+    margin: 10px 10px;
+}
+
+.card-footer i.active{
+    color: green;
+}
+
+.card-footer i.inactive{
+    color: red;
+}
+.card-footer .note{
+    font-size: 14px;
+    color: #7a7a8c;
 }
 
 .card:hover .card-header .project-title,
