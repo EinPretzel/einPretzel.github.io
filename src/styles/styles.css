@@ -11,6 +11,8 @@
 }
 
 body{
+    display: flex;
+    flex-direction: column;
     background-color: #17141D;
     height: 100vh;
     width: 100vw;
@@ -56,7 +58,7 @@ body{
 }
 
 .navbar nav .nav-item:hover, .navbar .nav-item.active{
-    color: #1134A6;
+    color: #ae00ff;
 }
 
 .content{
@@ -80,8 +82,29 @@ body{
     font-weight: 500px;
     color: white;
 }
+/* Home */
+h1{
+    font-size: 5rem;
+}
+/* About */
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header .position{
+    font-size: 1.5rem;
+}
+
+.card-header .company{
+    font-size: 1.3rem;
+}
+
+.card-header .title{
+    font-size: 1.5rem;
+}
 /* Projects */
-.card-list{
+.project .card-list{
     display: flex;
     padding: 3rem;
     overflow-x: scroll;
@@ -132,26 +155,28 @@ body{
     margin-left: -130px;
 }
 
-.card-header {
+.card .card-header {
     display: flex;
     flex-direction: column;
     margin-bottom: auto;
 }
 
-.card-header p {
+.card .card-header p {
     font-size: 14px;
+    font-family: Merriweather, sans-serif;
     margin: 0 0 1rem;
     color: #7a7a8c;
 }
 
-.card-header .project-title {
+.card .card-header .project-title {
     font-size: 20px;
     text-decoration: none;
     color: inherit;
     border: 0;
     display: inline-block;
 }
-.card-header .fa-plus{
+
+.card .card-header .fa-plus{
     display: flex;
     margin-top: 40%;
     justify-content: center;
@@ -159,29 +184,32 @@ body{
     color: inherit;
 }
 
-.card-header h4,.card-header ul li{
+.card .card-header h4,
+.card .card-header ul li{
     font-size: 1rem;
 }
 
-.card-footer{
+.card .card-footer{
     display: flex;
     justify-content: flex-end;
 }
 
-.card-footer .fa-circle{
+.card .card-footer .fa-circle{
     font-size: 1rem;
     margin: 10px 10px;
 }
 
-.card-footer i.active{
+.card .card-footer i.active{
     color: green;
 }
 
-.card-footer i.inactive{
+.card .card-footer i.inactive{
     color: red;
 }
-.card-footer .note{
+
+.card .card-footer .note{
     font-size: 14px;
+    font-family: Merriweather, sans-serif;
     color: #7a7a8c;
 }
 

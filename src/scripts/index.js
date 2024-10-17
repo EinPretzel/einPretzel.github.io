@@ -3,7 +3,7 @@ console.log("Script Loaded");
 // Active navbar link on scroll
 document.addEventListener("scroll", () => {
     const contents = document.querySelectorAll(".content");
-    const navLinks = document.querySelectorAll("header nav a");
+    const navLinks = document.querySelectorAll("header nav .nav-item");
 
     let currentContentId = "";
 
@@ -44,7 +44,7 @@ async function loadTemplate(sectionId, pageUrl) {
 
 // Load all templates on page load
 async function loadAllTemplates() {
-    const sections = ['home', 'about', 'experience', 'projects'];
+    const sections = ['home', 'about', 'projects'];
     for (const section of sections) {
         await loadTemplate(section, `src/pages/${section}.html`); // Load each section template
     }
@@ -76,7 +76,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     await loadAllTemplates(); // Load all section content initially
 
     // Attach click listeners to navbar links
-    document.querySelectorAll("header nav a").forEach((link) => {
+    document.querySelectorAll("header nav .nav-item").forEach((link) => {
         link.addEventListener("click", handleNavigation);
     });
 });
