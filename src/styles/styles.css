@@ -1,0 +1,168 @@
+@import url('https://fonts.cdnfonts.com/css/source-sans-pro');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Source Sans Pro, sans-serif;
+}
+
+body{
+    background-color: #17141D;
+    height: 100vh;
+    width: 100vw;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition: 0.3s ease 0s;
+    z-index: 10000;
+}
+
+.navbar .logo{
+    position: relative;
+    font-weight: 700;
+    font-size: 2rem;
+    color: white;
+    letter-spacing: 2px;
+    margin-right: auto;
+    transition: 0.3s ease 0s;
+}
+
+.navbar nav{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar nav a{
+    position: relative;
+    margin: 0 1rem;
+    color: white;
+    font-family: Merriweather, sans-serif;
+    font-weight: 500px;
+    transition: 0.3s ease 0s;
+}
+
+.navbar nav a:hover, a.active{
+    color: #1134A6;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+    background-color: #17141D;
+    font-size: 10rem;
+}
+
+/* Projects */
+.card-list{
+    display: flex;
+    padding: 3rem;
+    overflow-x: scroll;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 350px;
+    width: clamp(250px, 30vw, 300px);
+    min-width: 250px;
+    padding: 1.2rem 1.3rem;
+    border-radius: 1rem;
+    background: #17141D;
+    color: white;
+    box-shadow: -1rem 0 3rem #000;
+    transition: 0.3s;
+    scroll-snap-align: start;
+    clear: both;
+}
+
+.card-list::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+
+.card-list::-webkit-scrollbar-thumb {
+    background: #201c29;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(0,0,0,.25);
+}
+
+.card-list::-webkit-scrollbar-track {
+    background: linear-gradient(90deg,#201c29,#201c29 1px,#17141d 0,#17141d);
+}
+
+.card:focus-within~.card, .card:hover~.card {
+    transform: translateX(130px);
+}
+
+.card:hover{
+    transform: translateY(-1rem);
+    cursor: pointer;
+}
+
+.card:not(:first-child) {
+    margin-left: -130px;
+}
+
+.card-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: auto;
+}
+
+.card-header p {
+    font-size: 14px;
+    margin: 0 0 1rem;
+    color: #7a7a8c;
+}
+
+.card-header .project-title {
+    font-size: 20px;
+    text-decoration: none;
+    color: inherit;
+    border: 0;
+    display: inline-block;
+}
+.card-header i{
+    display: flex;
+    margin-top: 40%;
+    justify-content: center;
+    font-size: 4rem;
+    color: inherit;
+}
+
+.card-header h4,.card-header ul li{
+    font-size: 1rem;
+}
+
+.card-header .note{
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.card:hover .card-header .project-title,
+.card:hover .card-header i{
+    background: linear-gradient(90deg,#ae00ff,#492ee5);
+    text-shadow: none;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
