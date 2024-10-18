@@ -78,18 +78,27 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: brightness(50%);
+    filter: brightness(80%);
 }
 
 #about.content{
-    background: rgba(13,12,12,1);
-    background: radial-gradient(circle, rgb(98, 12, 115) 5%, rgba(13, 12, 12, 1) 60%);
+    background: url('../assets/about-background.png'),
+    radial-gradient(circle, rgb(98, 12, 115) 5%, rgba(13, 12, 12, 1) 60%);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(80%);
 }
 
 #projects.content{
-    background: rgba(13,12,12,1);
-    background: radial-gradient(circle, rgb(98, 12, 115) 5%, rgba(13, 12, 12, 1) 60%);
-}
+    background: url('../assets/project-background.png'),
+    radial-gradient(circle, rgb(98, 12, 115) 5%, rgba(13, 12, 12, 1) 60%);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(80%);}
 
 .section-wrap{
     position: relative;
@@ -102,13 +111,9 @@ body{
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 25px;
     padding: 30px 0;
+    min-width: 500px;
 }
 
-#home.content .section-wrap{
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto 0 5rem;
-}
 .section-title{
     font-size: 4rem;
     font-weight: 500px;
@@ -116,6 +121,20 @@ body{
     color: white;
 }
 /* Home */
+#home.content .section-wrap{
+    padding: 1rem;
+    margin: 0 auto 0 8rem;
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+}
+
+.profile .profile-footer{
+    display: flex;
+    justify-content: space-around;
+}
 .greeting{
     font-size: 5rem;
 }
@@ -125,7 +144,7 @@ body{
 }
 
 .p-button:hover{
-
+    color: rgb(98, 12, 115)
 }
 
 /* About */
@@ -161,7 +180,7 @@ body{
     min-width: 250px;
     padding: 1.2rem 1.3rem;
     border-radius: 1rem;
-    background: #17141D;
+    background: rgba(13,12,12,1);
     color: white;
     box-shadow: -1rem 0 3rem #000;
     transition: 0.3s;
@@ -172,6 +191,7 @@ body{
 .card-list::-webkit-scrollbar{
     width: 10px;
     height: 10px;
+    padding: 1rem
 }
 
 .card-list::-webkit-scrollbar-thumb {
