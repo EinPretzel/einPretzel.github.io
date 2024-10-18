@@ -33,12 +33,18 @@ body{
 
 .navbar .logo{
     position: relative;
+    display: flex;
+    align-items: center;
     font-weight: 700;
     font-size: 2rem;
     color: white;
     letter-spacing: 2px;
     margin-right: auto;
     transition: 0.3s ease 0s;
+}
+
+.navbar .logo:hover{
+    cursor: default;
 }
 
 .navbar nav{
@@ -129,6 +135,7 @@ body{
 .profile{
     display: flex;
     flex-direction: column;
+    width: 550px;
 }
 
 .profile .profile-footer{
@@ -137,6 +144,12 @@ body{
 }
 .greeting{
     font-size: 5rem;
+}
+
+.p-desc{
+    font-size: 1.3rem;
+    font-family: Merriweather, sans-serif;
+    margin: 0.4rem 0;
 }
 .p-button{
     color: white;
@@ -149,23 +162,72 @@ body{
 
 /* About */
 .container{
+    position: relative;
     display: flex;
     flex-direction: column;
+    width: 350px;
+    height: 500px;
+    background: rgba(189, 181, 181, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    padding: 30px 20px;
+    margin: 0 2rem;
 }
 
-.card-header .position{
+.container-title{
+    font-size: 1.8rem;
+}
+
+.card-work{
+    display: flex;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 1rem 0;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 13px 21px rgba(0, 0, 0, 0.05);
+}
+
+.card-work .position{
     font-size: 1.5rem;
 }
 
-.card-header .company{
-    font-size: 1.3rem;
+.card-work .company{
+    font-family: Merriweather, sans-serif;
+    font-size: 1rem;
+    color: #7a7a8c;
 }
 
-.card-header .title{
-    font-size: 1.5rem;
+.card-work .task{
+    font-size: 1rem;
 }
+.work{
+    flex-direction: column;
+}
+.stack{
+    flex-direction: row;
+    gap: 8px;
+}
+.card-work i.logo, 
+.card-work .desc{
+    font-size: 1.2rem;
+    color: white;
+}
+
+.card-work img{
+    object-fit: cover;
+    height: 1.2rem;
+    filter: invert(1);
+}
+
 /* Projects */
-.project .card-list{
+.card-list{
+    position: relative;
     display: flex;
     padding: 3rem;
     overflow-x: scroll;
