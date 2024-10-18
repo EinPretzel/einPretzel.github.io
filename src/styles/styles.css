@@ -58,7 +58,7 @@ body{
 }
 
 .navbar nav .nav-item:hover, .navbar .nav-item.active{
-    color: #ae00ff;
+    color: rgb(98, 12, 115);
 }
 
 .content{
@@ -67,19 +67,27 @@ body{
     align-items: center;
     min-height: 100vh;
     color: white;
-    background-color: #17141D;
+    background: rgba(13,12,12,1);
+    background: radial-gradient(circle, rgb(98, 12, 115) 5%, rgba(13, 12, 12, 1) 60%);
     font-size: 10rem;
 }
 
 .section-wrap{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    background: rgba(189, 181, 181, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    padding: 30px 0;
 }
 
 .section-title{
     font-size: 4rem;
     font-weight: 500px;
+    text-align: center;
     color: white;
 }
 /* Home */
@@ -135,11 +143,11 @@ h1{
 .card-list::-webkit-scrollbar-thumb {
     background: #201c29;
     border-radius: 10px;
-    box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(0,0,0,.25);
+    box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(73, 3, 80, 0.25);
 }
 
 .card-list::-webkit-scrollbar-track {
-    background: linear-gradient(90deg,#201c29,#201c29 1px,#17141d 0,#17141d);
+    background: #4d0d5e;
 }
 
 .card:focus-within~.card, .card:hover~.card {
