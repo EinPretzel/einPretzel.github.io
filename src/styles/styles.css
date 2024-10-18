@@ -67,12 +67,32 @@ body{
     align-items: center;
     min-height: 100vh;
     color: white;
-    background: rgba(13,12,12,1);
-    background: radial-gradient(circle, rgb(98, 12, 115) 5%, rgba(13, 12, 12, 1) 60%);
     font-size: 10rem;
 }
 
+#home.content{
+    position: relative;
+    background: url('../assets/profile.png'),
+    radial-gradient(circle, rgb(98, 12, 115) 5%, rgba(13, 12, 12, 1) 60%);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(50%);
+}
+
+#about.content{
+    background: rgba(13,12,12,1);
+    background: radial-gradient(circle, rgb(98, 12, 115) 5%, rgba(13, 12, 12, 1) 60%);
+}
+
+#projects.content{
+    background: rgba(13,12,12,1);
+    background: radial-gradient(circle, rgb(98, 12, 115) 5%, rgba(13, 12, 12, 1) 60%);
+}
+
 .section-wrap{
+    position: relative;
     display: flex;
     flex-direction: column;
     background: rgba(189, 181, 181, 0.1);
@@ -84,6 +104,11 @@ body{
     padding: 30px 0;
 }
 
+#home.content .section-wrap{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 0 5rem;
+}
 .section-title{
     font-size: 4rem;
     font-weight: 500px;
@@ -91,9 +116,18 @@ body{
     color: white;
 }
 /* Home */
-h1{
+.greeting{
     font-size: 5rem;
 }
+.p-button{
+    color: white;
+    font-size: 5rem;
+}
+
+.p-button:hover{
+
+}
+
 /* About */
 .container{
     display: flex;
