@@ -25,7 +25,7 @@ document.addEventListener("scroll", () => {
         }
     });
 });
-
+/*
 // Function to load content dynamically into sections
 async function loadTemplate(sectionId, pageUrl) {
     const section = document.getElementById(sectionId);
@@ -62,7 +62,7 @@ function handleNavigation(event) {
         scrollToSection(route); // Smooth scroll to the section
     }
 }
-
+*/
 // Smooth scroll to the section
 function scrollToSection(route) {
     const targetSection = document.getElementById(route);
@@ -70,7 +70,7 @@ function scrollToSection(route) {
         targetSection.scrollIntoView({ behavior: "smooth" });
     }
 }
-
+/*
 // Initialize the SPA on page load
 window.addEventListener("DOMContentLoaded", async () => {
     await loadAllTemplates(); // Load all section content initially
@@ -80,10 +80,10 @@ window.addEventListener("DOMContentLoaded", async () => {
         link.addEventListener("click", handleNavigation);
     });
 });
-
+*/
 // Handle browser back/forward button navigation
 window.addEventListener("popstate", (event) => {
     const route = event.state ? event.state.route : "home";
-    loadTemplate(route, `src/pages/${route}.html`); // Load content based on history
+    //loadTemplate(route, `src/pages/${route}.html`); // Load content based on history
     scrollToSection(route); // Ensure smooth scrolling when navigating history
 });
