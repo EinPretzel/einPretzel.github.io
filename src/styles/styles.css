@@ -287,6 +287,13 @@ body{
     justify-content: flex-start;
 }
 
+.project-info{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem;
+    gap: 1rem;
+}
 
 @media (max-width:50em){
     .navbar{
