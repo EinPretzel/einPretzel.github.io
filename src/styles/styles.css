@@ -78,7 +78,7 @@ body{
 .content-wrapper{
     display: flex;
     flex-direction: column;
-    margin: 1rem 2.5rem;
+    margin: 1rem 2.5rem 0 2.5rem;
     padding: 2rem;
 }
 
@@ -92,6 +92,8 @@ body{
     color: white;
     font-size: 10rem;
     gap: 2rem;
+    margin-top: 60px;
+    padding-top: 60px;
 }
 
 .glass{
@@ -101,6 +103,10 @@ body{
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 25px;
+}
+
+.prime{
+    background: linear-gradient(to bottom,rgb(123, 8, 138), rgb(64, 11, 71));
 }
 
 .title{
@@ -115,6 +121,8 @@ body{
 #home.content{
     display: grid;
     grid-template-columns: 4fr 6fr;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .my-profile{
@@ -167,7 +175,7 @@ body{
     text-decoration: line-through;
 }
 
-.tag-list{
+.pill-list{
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -180,21 +188,17 @@ body{
     gap: 10px;
 }
 
-.pill-tag{
+.pill{
     display: flex;
     align-items: center;
     justify-content: flex-start;
     padding: 0.5rem 1rem;
-    background: rgba(189, 181, 181, 0.1);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 1rem;
     height: fit-content;
     min-width: fit-content;
 }
 
-.pill-tag svg{
+.pill svg{
     font-size: 1rem;
     width: 32px;
     height: 32px;
@@ -259,10 +263,13 @@ body{
     gap: 0.5rem;
 }
 
-.job-title{
+.card-title{
+    font-size: clamp(1.2rem,6vw,1.6rem);
+}
+
+.work-card-header .card-title{
     grid-row: 1;
     grid-column: 1;
-    font-size: clamp(1.2rem,6vw,1.6rem);
 }
 
 #about h3{
@@ -275,7 +282,7 @@ body{
     color: #7a7a8c;
 }
 
-.time-frame{
+#about.time-frame{
     grid-column: 1;
     grid-row: 3;
 }
@@ -331,13 +338,37 @@ body{
     gap: 1rem;
 }
 
+.project-list{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.proj-card{
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem;
+    gap: 1rem;
+}
+
+.proj-card-header .time-frame{
+    font-size: clamp(1rem,5vw,1.2rem)
+}
+
+
+
 @media (max-width:50em){
     .navbar{
         padding: 2rem;
     }
 
-    .content-wrapper{
-        min-width: 600px;
+    .navbar nav{
+        display: none;
+    }
+
+    body, .content-wrapper{
+        min-width: 480px;
+        margin: 0;
     }
     .content{
         min-height: 100vh;
@@ -345,7 +376,7 @@ body{
         padding: 5rem 1.5rem 1.5rem;
         width: 100%;
         gap: 2rem;
-        flex-shrink: 1;
+        flex: 1 1;
     }
 
     /* Home */
@@ -353,6 +384,7 @@ body{
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-top: 60px;
     }
 
     .my-profile{
@@ -370,8 +402,21 @@ body{
     }
 
     /* About */
+    #about.content{
+        padding-left: 0;
+    }
     .work-info{
         display: flex;
         flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0;
     }
+
+    .work-card{
+        text-align: start;
+    }
+
+    /* Project */
+
 }
