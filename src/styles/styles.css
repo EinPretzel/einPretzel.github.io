@@ -127,7 +127,7 @@ body{
     @keyframes autoShowAnimation{
         from{
             opacity: 0;
-            transform: translateX(5em) scale(0.3);
+            transform: translateX(-5em) scale(0.3);
         }
         to{
             opacity: 1;
