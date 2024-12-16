@@ -67,7 +67,7 @@ body{
     margin: 0 1rem;
     color: rgb(213, 159, 224);
     font-family: var(--secondary-font);
-    font-weight: 500px;
+    font-weight: 500;
     transition: 0.3s ease 0s;
 }
 
@@ -101,6 +101,7 @@ body{
     background: rgba(189, 181, 181, 0.1);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 25px;
 }
@@ -115,6 +116,22 @@ body{
 
 .subtitle{
     font-size: clamp(1.3rem,8vw,2.3rem);
+}
+
+.autoshow{
+    animation: autoShowAnimation both;
+    animation-timeline: view(70% 5%);
+}
+
+@keyframes autoShowAnimation{
+    from{
+        opacity: 0;
+        transform: translateX(5em) scale(0.3);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
 }
 
 /* Home */
@@ -164,14 +181,12 @@ body{
     gap: 1rem;
 }
 
-.p-desc .active-loc{
+.p-desc .loc{
     font-size: inherit;
     font-family: inherit;
 }
 
-.p-desc .loc{
-    font-size: inherit;
-    font-family: inherit;
+.p-desc .loc:not(.new-loc){
     text-decoration: line-through;
 }
 
@@ -344,18 +359,67 @@ body{
     gap: 1rem;
 }
 
+.list{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+
+.list::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+
+.list::-webkit-scrollbar-thumb{
+    background: #201c29;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.list::-webkit-scrollbar-track{
+    background: linear-gradient(90deg,#201c29,#201c29 1px,#17141d 0,#17141d);
+}
+
 .proj-card{
+    scroll-snap-align: start;
     display: flex;
     flex-direction: column;
     padding: 0.8rem;
     gap: 1rem;
+    max-width: 450px;
+    min-width: 350px;
+    min-height: 280px;
 }
 
 .proj-card-header .time-frame{
     font-size: clamp(1rem,5vw,1.2rem)
 }
 
+/* Contact */
+.contact{
+    isolation: isolate;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 7.5rem;
+    gap: 3rem;
+    border-top: 1px solid #283044;
+    border-bottom: 1px solid #283044;
+    color: white;
+}
 
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5rem 5rem;
+}
+
+.footer-note{
+    color: white;
+}
 
 @media (max-width:50em){
     .navbar{
@@ -418,5 +482,17 @@ body{
     }
 
     /* Project */
+    #project.content{
+        padding-left: 0;
+    }
+
+    .project-info{
+        padding: 0;
+    }
+
+    .project-list{
+        display: flex;
+        flex-direction: column;
+    }
 
 }
