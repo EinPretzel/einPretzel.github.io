@@ -122,8 +122,6 @@ body{
     .autoshow{
         animation: autoShowAnimation both;
         animation-timeline: view(70% 5%);
-        animation-iteration-count: 1;
-        animation-fill-mode: forwards;
     }
     
     @keyframes autoShowAnimation{
